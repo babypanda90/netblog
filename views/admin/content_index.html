@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+<ol class="breadcrumb">
+    <li><a href="/">home</a></li>
+    <li><span>content</span></li>
+</ol>
+
+<h3>content list</h3>
+
+{% include "page.html" %}
+
+<table class="table table-hover table-striped">
+    <tr>
+        <th>ID</th>
+        <th>category</th>
+        <th>title</th>
+        <th>username</th>
+        <th>date</th>
+        <th>views</th>
+        <th>manipulation</th>
+    </tr>
+    {% for cont in content %}
+    <tr>
+        <td>{{ cont._id.toString() }}</td>
+        <td>{{ cont.category.categoryname }}</td>
+        <td>{{ cont.title }}</td>
+        <td>{{ cont.user.username }}</td>
+        <td>{{ cont.addTime|date("Y-m-d H:i:s", -2*60) }}</td>
+        <td>{{ cont.views }}</td>
+        <td>
+            <a href="/admin/content/edit?id={{ cont._id.toString() }}">edit</a> | 
+            <a href="/admin/content/delete?id={{ cont._id.toString() }}">delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% include "page.html" %}
+
+{% endblock %}

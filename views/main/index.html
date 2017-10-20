@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div id="works-corridor">
+        {% for cont in data.content %}
+        <div class="work">
+            <h1>{{ cont.title }}</h1>
+            <p>Author : <span>{{ cont.user.username }}</span> - Date : <span>{{ cont.addTime|date("Y-m-d H:i:s", -2*60) }}</span> - Views : <span>{{ cont.views }}</span> - Commentes : <span>0</span></p>
+            <p class="description">Description : {{ cont.description }}</p>
+            <a href="/detail?cont_id={{ cont._id.toString() }}">Detail</a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

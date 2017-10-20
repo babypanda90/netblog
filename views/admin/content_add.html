@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+<ol class="breadcrumb">
+    <li><a href="/">home</a></li>
+    <li><span>add content</span></li>
+</ol>
+
+<h3>add content</h3>
+
+
+<form method="post">
+    <div class="form-group">
+        <label for="category_id">Category</label>
+        <select class="form-control" name="category_id" id="category_id" placeholder="select categoty">
+            {% for cate in category %}
+            <option value="{{ cate._id.toString() }}">{{ cate.categoryname }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="enter your title">
+    </div>
+    
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" name="description" id="description" placeholder="enter your description" rows="5"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="detail">Detail</label>
+        <textarea class="form-control" name="detail" id="detail" placeholder="enter your detail" rows="15"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+
+{% endblock %}

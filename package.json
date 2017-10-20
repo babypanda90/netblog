@@ -1,0 +1,19 @@
+{
+  "name": "netblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "danchi",
+  "license": "ISC",
+  "dependencies": {
+    "cookies": "^0.7.1",
+    "express": "^4.16.2",
+    "git": "^0.1.5",
+    "markdown": "^0.5.0",
+    "mongoose": "^4.12.1",
+    "swig": "^1.4.2"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content-type="text/html; charset=utf-8">
+        <title>index</title>
+        <link rel="stylesheet" type="text/css" href="/public/css/main.css" />
+        <style>
+        </style>
+        <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/public/js/index.js"></script>
+    </head>
+    <body>
+        <div id="works-room">
+            <div id="works-field">
+                <a href="/">Home</a>
+                {% for cate in data.category %}
+                <a href="/?cate_id={{ cate._id.toString() }}">{{ cate.categoryname }}</a>
+                {% endfor %}
+            </div>
+
+            {% block content %} {% endblock %}
+
+            {% if not data.userInfo._id %}
+            <div id="users-login">
+                <h3>Login</h3>
+                <div><label>Username</label><input name="username" type="text" /></div>
+                <div><label>Password</label><input name="password" type="password" /></div>
+                <div id="repw" style="display: none;"><label>Confirm</label><input name="repassword" type="password" /></div>
+                <button id="login-submit">submit</button><button id="signin" style="display: none">sign in</button><button id="signup">sign up</button>
+                <span id="login-warning"><span>
+            </div>
+            {% else %}
+            <div id="users-info">
+                <h3>Info</h3>
+                <div><span id="info-username">{{ data.userInfo.username }}</span></div>
+                {% if data.userInfo.isAdmin %}
+                <div>
+                    <span>Hello, admin !</span>
+                    <a href="/admin">bashboard</a>
+                </div>
+                {% else %}
+                <div>
+                    <span>Hello, welcome to my network blog !</span>
+                </div>
+                {% endif %}
+                <button id="info-logout">logout</button>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>

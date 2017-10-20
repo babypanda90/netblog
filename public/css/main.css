@@ -1,0 +1,208 @@
+body, h3 {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background: #F0F8FF;
+}
+
+#works-room {
+    position: absolute;
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 10px;
+}
+
+#works-field {
+    position: absolute;
+    width: 1280px;
+    height: 50px;
+    border: 1px solid #888888;
+    background: #ffffff;
+    
+}
+
+#works-field a {
+    display: inline-block;
+    height: 50px;
+    margin-left: 20px;
+    line-height: 50px;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 100%;
+    color: black;
+}
+
+#works-field a:hover {
+    border-bottom: 4px solid #1E90FF;
+}
+
+#works-corridor {
+    position: absolute;
+    top: 62px;
+    width: 960px;
+    height: auto;
+    border-radius: 5px;
+    /* border-bottom: 1px solid #888888; */
+    padding: 0 5px 0 5px;
+    background: #ffffff;
+}
+
+#works-corridor .work {
+    height: 200px;
+    border-top: 1px solid #888888;
+}
+#works-corridor .description {
+    text-align: left;
+}
+#works-corridor span {
+    color: blue;
+}
+
+#works-corridor > .work > a {
+    float: right;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    background: #1E90FF;
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+#works-corridor .content {
+    border-top: 1px solid #888888;
+}
+
+#works-corridor .detail {
+    text-align: left;
+}
+
+/*------comments------*/
+#comments {
+    border-top: 1px solid #888888;
+}
+
+#info {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+#context {
+    width: 960px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #888888;
+
+}
+#context:focus {
+    border-bottom: 2px solid black;
+}
+
+#send {
+    display: block;
+    height: 30px;
+    width: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 880px;
+    background: #1E90FF;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+#comments .message {
+    margin-bottom: 20px;
+    text-align: left;
+
+}
+
+#comments .sender {
+    font-weight: bold;
+}
+
+/*------users-login------*/
+#users-login h3 {
+    height: 40px;
+    line-height: 40px;
+    background: #1E90FF;
+}
+
+#users-login {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    right: -2px;
+    border: 1px solid #888888;
+    background: #ffffff;
+    top: 62px;
+}
+
+#users-login div {
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#users-login label {
+    display: inline-block;
+    width: 80px;
+}
+
+#users-login input {
+    text-align: left;
+}
+
+#users-login button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#login-warning {
+    display: block;
+    margin-top: 5px;
+    color: red;
+}
+
+/*------users-info------*/
+#users-info h3 {
+    height: 40px;
+    line-height: 40px;
+    background: #1E90FF;
+}
+#users-info {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    right: -2px;
+    border: 1px solid #888888;
+    background: #ffffff;
+    top: 62px;
+}
+
+#users-info div {
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#users-info label {
+    display: inline-block;
+    width: 80px;
+}
+
+#info-username {
+    display: inline-block;
+    color: blue;
+}
+
+#info-logout {
+    margin-top: 10px;
+    margin-right: 10px;
+}

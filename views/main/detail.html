@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div id="works-corridor">
+        <div class="content">
+            <h1>{{ data.cont.title }}</h1>
+            <p>Author : <span>{{ data.cont.user.username }}</span> 
+                - Date : <span>{{ data.cont.addTime|date("Y-m-d H:i:s", -2*60) }}</span> 
+                - Views : <span>{{ data.cont.views }}</span> 
+                - Commentes : <span>0</span></p>
+            <p class="detail">{{ data.cont.detail }}</p>
+        </div>
+
+        <div id="comments">
+            <p id="info"></p>
+            <input type="hidden" id="cont_id" name="cont_id" value="{{ data.cont._id.toString() }}" />
+
+            {% if data.userInfo.username %}
+            <input type="text" id="context" name="context" placeholder="Enter your comment" />
+            <a href="#" id="send">Confirm</a>
+            {% endif %}
+
+            <div id="messagesBox">
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="/public/js/comment.js"></script>
+{% endblock %}

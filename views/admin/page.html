@@ -1,0 +1,7 @@
+<nav aria-label="...">
+    <ul class="pager">
+      <li class="previous"><a href="{{ url }}?page={{ curr_page - 1 }}"><span aria-hidden="true">&larr;</span> Previous</a></li>
+      <li>There are totally {{ items_count }} items in {{ pages_quantity }} pages, {{ page_size }} items for each page, current page {{ curr_page }}<li>
+      <li class="next"><a href="{{ url }}?page={{ curr_page + 1 }}">Next <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+</nav>

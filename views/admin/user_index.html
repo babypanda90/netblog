@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+<ol class="breadcrumb">
+    <li><a href="/">home</a></li>
+    <li><span>user</span></li>
+</ol>
+
+<h3>user list</h3>
+
+{% include "page.html" %}
+
+<table class="table table-hover table-striped">
+    <tr>
+        <th>ID</th>
+        <th>username</th>
+        <th>password</th>
+        <th>isAdmin</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user._id.toString() }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.password }}</td>
+        <td>{% if user.isAdmin %}
+            yes
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% include "page.html" %}
+
+{% endblock %}

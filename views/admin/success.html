@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+<ol class="breadcrumb">
+    <li><a href="/">home</a></li>
+    <li><span>success</span></li>
+</ol>
+
+  
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Success</h3>
+  </div>
+  <div class="panel-body">
+    {{ succ_message }}
+  </div>
+  <div class="panel-footer">
+      {% if succ_url %}
+      <a href="{{ succ_url }}">Return previous step</a>
+      {% else %}
+      <a href="javascript:window.history.back();">Return previous step</a>
+      {% endif %}
+  </div>
+</div>
+
+
+{% endblock %}
